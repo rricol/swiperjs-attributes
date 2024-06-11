@@ -1,4 +1,4 @@
-# SwiperJS Slider Integration
+# SwiperJS attributes Integration
 
 This project demonstrates how to integrate SwiperJS sliders using custom HTML attributes to configure various settings dynamically.
 
@@ -15,70 +15,13 @@ Make sure you have the following installed:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/rricol/swiperjs-slider.git
-   cd swiperjs-slider
+   git clone https://github.com/rricol/swiperjs-attributes.git
+   cd swiperjs-attributes
    ```
 
 2. **Install dependencies:**
    ```bash
    pnpm install
-   ```
-
-## Usage
-
-1. **Include SwiperJS styles in your project:**
-
-   ```javascript
-   import 'swiper/css';
-   ```
-
-2. **Import Swiper and initialize sliders:**
-
-   ```javascript
-   import Swiper from 'swiper';
-
-   const slidersList = document.querySelectorAll('[nu-slider-el="slider"]');
-   slidersList.forEach((slider) => {
-     const direction = slider.getAttribute('nu-slider-direction') || 'horizontal';
-     const loop = slider.getAttribute('nu-slider-loop') === 'true';
-     const speed = parseInt(slider.getAttribute('nu-slider-speed') || '400', 10);
-     const spaceBetween = parseInt(slider.getAttribute('nu-slider-space-between') || '16', 10);
-     const slidesPerView = parseInt(slider.getAttribute('nu-slider-slides-per-view') || '1', 10);
-     const navigationNext = slider.getAttribute('nu-slider-navigation-next') || undefined;
-     const navigationPrev = slider.getAttribute('nu-slider-navigation-prev') || undefined;
-     const pagination = slider.getAttribute('nu-slider-pagination') || undefined;
-     const scrollbar = slider.getAttribute('nu-slider-scrollbar') || undefined;
-     const autoplay = slider.getAttribute('nu-slider-autoplay') === 'true';
-
-     const swiper = new Swiper(slider as HTMLElement, {
-       // Optional parameters
-       direction: direction as 'horizontal' | 'vertical',
-       loop: loop,
-       speed: speed,
-       spaceBetween: spaceBetween,
-       slidesPerView: slidesPerView,
-
-       // Autoplay
-       ...(autoplay ? { autoplay: { delay: 5000 } } : {}),
-
-       // Scrollbar
-       scrollbar: {
-         el: scrollbar,
-       },
-
-       // Pagination
-       pagination: {
-         el: pagination,
-         clickable: true,
-       },
-
-       // Navigation arrows
-       navigation: {
-         nextEl: navigationNext,
-         prevEl: navigationPrev,
-       },
-     });
-   });
    ```
 
 ## HTML Structure
@@ -87,7 +30,7 @@ To use the slider, add the following HTML structure and attributes to your proje
 
 ```html
 <div
-  nu-slider-el="slider"
+  class="swiper"
   nu-slider-direction="horizontal"
   nu-slider-loop="true"
   nu-slider-speed="500"

@@ -1,8 +1,8 @@
 {
-  "name": "@numeraswiss/swiper-slider",
+  "name": "@numeraswiss/swiperjs-attributes",
   "version": "1.0.0",
   "description": "A simple slider component built with Swiper.js",
-  "homepage": "https://github.com/rricol/swiper-slider#readme",
+  "homepage": "https://github.com/rricol/swiperjs-attributes#readme",
   "license": "ISC",
   "keywords": [],
   "author": {
@@ -11,10 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rricol/swiper-slider.git"
+    "url": "git+https://github.com/rricol/swiperjs-attributes.git"
   },
   "bugs": {
-    "url": "https://github.com/rricol/swiper-slider/issues"
+    "url": "https://github.com/rricol/swiperjs-attributes/issues"
   },
   "type": "module",
   "main": "src/index.ts",
